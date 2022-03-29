@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Link} from 'react-router-dom';
 import { Layout, Typography, Space } from 'antd';
 
-import {Navbar, Exchanges, Homepage, Cryptocurrencies, CryptoDetails, News } from './components'
+import { Navbar, Exchanges, Homepage, Cryptocurrencies, CryptoDetails, News } from './components';
 import './App.css'
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
         </div>
         <div className="main">
             <Layout>
-              <div>
+              <div className="routes">
                 <Switch>
                   <Route exact path="/">
                       <Homepage />
@@ -33,12 +33,21 @@ const App = () => {
                 </Switch>
               </div>
             </Layout>
-        </div>
+        
         <div className="footer">
-
+          <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
+            Cryptoverse <br/>
+            All rights reserverd
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/exchanges">Exchanges</Link>
+            <Link to="/news">News</Link>
+          </Space>
+        </div>
         </div>
     </div>
-  )
+  );
 }
 
-export default App;
+export default App
