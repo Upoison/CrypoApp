@@ -45,6 +45,7 @@ const App = () => {
             <Link to="/news">News</Link>
           </Space>
         </div>
+        
         </div>
     </div>
   );
